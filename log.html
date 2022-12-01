@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script><script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script><script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-messaging.js"></script><script>
 </head>
 <body>
 <form action="auth();">
@@ -11,11 +12,23 @@
 <input type="button" name="getotp" value="getotp" id = "getotp" onclick="get_otp();">
 <input type="text" name="otp" placeholder="otp" id = "otp" pattern="[0-9]{4}">
 <input type="button" name="verify" id = "verify" onclick="verifyotp();" >
-<script type="text/javascript" src = "auth.js"></script>
-<script type="text/javascript" src="firebase-firestore.js"></script>
-<script type="text/javascript" src="firebase-analytics.js"></script>
-<script type="text/javascript" src="firebase-auth.js"></script>
-<script type="text/javascript" src="firebase-app.js"></script>
+<script type="text/javascript" src = ""></script>
+<script type="text/javascript">
+    const firebaseConfig = {
+  apiKey: "AIzaSyCI9dxjWDI4nzh9RKwsu2Lrqn1by08hUd8",
+  authDomain: "myfirst-30d3a.firebaseapp.com",
+  projectId: "myfirst-30d3a",
+  storageBucket: "myfirst-30d3a.appspot.com",
+  messagingSenderId: "270141127416",
+  appId: "1:270141127416:web:a5a475a1ea7d515c76190d",
+  measurementId: "G-546C5TH1FW"
+};
+firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    var messaging = firebase.messaging();	
+    console.log(messaging);
+    console.log();
+</script>
 </form>
 </body>
 </html>
